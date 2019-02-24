@@ -40,7 +40,7 @@ class ArticleController extends FOSRestController
         $article->setContent($request->get('content'));
         $this->em->persist($article) ;
         $this->em->flush();
-        $this->em->flush();
+     //   $this->em->flush();
        // var_dump($article) ; die();
         // In case our POST was a success we need to return a 201 HTTP CREATED response
         return View::create($article, Response::HTTP_CREATED);
